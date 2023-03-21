@@ -12,7 +12,8 @@ farForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const farDisplay = document.querySelector('.farenheit');
   let userInput = document.getElementById('celcius');
-  farDisplay.innerHTML = farenheit(userInput.value) + " Degrees Farenheit";
+  farDisplay.innerText = farenheit(userInput.value) + " Degrees Farenheit";
+  // farDisplay.style.color = "olive"
 });
 
 function celcius(farenheit) {
@@ -24,4 +25,5 @@ function farenheit(c) {
  let farenheit = (c * 9/5) + 32;
  return parseInt(farenheit);
 }
+
 
