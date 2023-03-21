@@ -1,5 +1,8 @@
 
 let celciusForm = document.getElementById('tempCelcius');
+celciusForm.onmouseover = function() {
+  celciusForm.style.backgroundColor = "pink"
+}
 celciusForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const celciusDisplay = document.querySelector('.celcius');
@@ -13,7 +16,6 @@ farForm.addEventListener("submit", (e) => {
   const farDisplay = document.querySelector('.farenheit');
   let userInput = document.getElementById('celcius');
   farDisplay.innerText = farenheit(userInput.value) + " Degrees Farenheit";
-  // farDisplay.style.color = "olive"
 });
 
 function celcius(farenheit) {
@@ -26,4 +28,10 @@ function farenheit(c) {
  return parseInt(farenheit);
 }
 
-
+let buttons = document.querySelectorAll('button')
+buttons.forEach(button => button.onmouseenter = function() {
+  button.style.backgroundColor = "salmon"
+})
+buttons.forEach(button => button.onmouseleave = function() {
+  button.style.backgroundColor = "azure"
+})
